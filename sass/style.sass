@@ -1,0 +1,1762 @@
+@import "normalize.scss"
+@import "reset.scss"
+
+$light-gray-color: #F0F0F0
+$main-orange-color: #FF885A
+$main-blue-color: #5899FF
+
+@mixin properties-squares-second-section
+    width: 360px
+    height: 360px
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    border-radius: 10px
+    position: relative
+    display: flex
+    align-items: flex-end
+    z-index: 1
+    
+    
+*
+    box-sizing: border-box
+
+body
+    position: relative
+@font-face 
+   font-family: 'MontserraT'
+   src: url(../fonts/Montserrat-Regular.ttf)
+   font-style: normal
+   font-weight: normal
+   
+@font-face 
+   font-family: 'MontserraT'
+   src: url(../fonts/Montserrat-SemiBold.ttf)
+   font-style: normal
+   font-weight: bold
+    
+html, body
+    font-family: "MontserraT"
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+
+.main-section
+    position: relative
+    overflow: hidden
+    min-height: 800px
+    padding-top: 16px
+    background-color: $light-gray-color
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        height: 69px
+    &__logo
+        width: 134px
+    &__content-container
+        position: relative
+        display: flex
+        flex-direction: row
+    &__first-donut
+        position: absolute
+        top: 95px
+        right: 47px
+        z-index: 1
+    &__second-donut
+        position: absolute
+        right: -100px
+        top: 700px
+.nav-menu
+    &__list
+        display: flex
+        flex-direction: row
+    &__list-item
+        color: black
+        text-decoration: none
+        font-size: 18px
+        font-weight: 600
+        margin-right: 80px
+        &:last-child // эта запись обозначает полное название (nav-menu__list-item)
+            margin: 0px // очень удобно обращаться к псевдоклассам таким образом
+        &:hover
+            color: grey
+
+.left-wrapper-first-section
+    position: relative
+    &__img
+        position: relative
+        top: 2px
+        z-index: 1
+    &__rectangle-orange
+        width: 437.7px
+        height: 140.5px
+        background: $main-orange-color
+        border-radius: 100px // закругление
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) // тень
+        position: absolute
+        top: 100px
+        left: 135px
+        transform: rotate(-55deg) //разворачивает элемент
+    &__rectangle-blue
+       width: 368.05px
+       height: 135.69px
+       background: $main-blue-color
+       position: absolute
+       border-radius: 100px
+       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+       transform: rotate(-35deg)
+       top: 120px
+       left: 230px
+    &__rectangle-grey
+       position: absolute
+       width: 422.66px
+       height: 130.17px
+       background: #E3E3E3
+       border-radius: 100px
+       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+       top: 200px
+       left: 195px
+       transform: rotate(-13deg)
+.right-wrapper-first-section
+    width: 393px
+    position: absolute
+    right: 9px
+    top: 150px
+    padding-left: 10px
+    &__social-icons-box
+        margin-bottom: 1px
+        position: relative
+        z-index: 2
+    &__title
+        margin-bottom: 20px
+        position: relative
+        z-index: 2
+    &__main-text_vertical
+        display: none
+    &__main-text
+        max-width: 362px
+        margin-bottom: 40px
+        position: relative
+        z-index: 2
+    &__text-part
+        // margin-bottom задает расстояние между параграфами текста
+        margin-bottom: 1.5em
+        font-size: 16px
+        line-height: 1.3em
+        // line-height задает расстояние между строками в параграфе
+        &:hover
+            cursor: default
+        &:last-child
+            margin: 0px
+        
+.social-icons
+    display: inline-flex
+    flex-direction: row
+    a
+        width: 40px
+        height: 40px 
+    &__item
+        width: 45px
+        height: 45px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 17px
+        &:last-child
+            margin: 0px
+        &:hover
+            border-radius: 100px
+            background-color: $main-blue-color 
+    
+.title
+    position: relative
+    font-size: 72px
+    font-weight: 600
+    &:hover
+        cursor: default       
+    &__hr
+        // у этого тэга встроенные margin есть, так как он не добавлен в reset.scss. Об этом нужно помнить и обнулить его вручную
+        width: 65px
+        position: absolute
+        left: 20px
+        margin: 0px
+        border: none
+        border-top: 2px solid black
+        &:hover
+            cursor: default
+        &_second
+            top: 85px
+        &_third
+            top: 75px
+            left: 25px
+        &_footer
+            top: 75px   
+            left: 10px
+.buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__book-lesson
+        width: 200px
+        height: 60px
+        font-weight: 600
+        font-size: 18px
+        line-height: 19px
+        text-align: center
+        color: white
+        background-color: $main-orange-color
+        border: none
+        border-radius: 100px
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+        &:hover
+            cursor: pointer
+            border-radius: 100px
+            background-color: #FF9F7B
+    &__have-questions
+        width: 143px
+        height: 50px
+        font-size: 16px
+        display: flex
+        align-items: center
+        justify-content: space-around
+        
+        
+        &:hover
+            cursor: pointer
+            border-radius: 100px
+            background-color:  #E3E3E3
+
+.donut
+    width: 194px
+    height: 194px
+    background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+    border-radius: 150px
+    display: flex
+    align-items: center
+    justify-content: center
+    &_big
+        width: 282px
+        height: 282px
+    &__hole
+        width: 129.33px
+        height: 129.33px
+        background: $light-gray-color
+        border-radius: 100px
+        &_big
+            width: 188px
+            height: 188px
+        &_white
+            background: white
+       
+.second-section
+    min-height: 750px
+    padding-top: 40px
+    overflow: hidden
+    &__title
+        margin-bottom: 40px
+    &__cards-box
+        margin-bottom: 50px
+    &__points-box
+        display: flex
+        justify-content: space-evenly
+    &__content-container
+        position: relative
+    &__first-donut
+        position: absolute
+        top: 20px
+        right: -80px
+    &__second-donut
+        position: absolute
+        top: 325px
+        left: -110px
+
+.cards-box
+    display: flex
+    justify-content: space-between
+    &__item
+        @include properties-squares-second-section
+        background-color: $light-gray-color
+        &_orange
+            background-color: $main-orange-color
+        &_blue
+            background-color: $main-blue-color
+    &__text
+        width: 270px
+        height: 88px
+        text-align: center
+        font-weight: 600
+        font-size: 32px
+        line-height: 39px
+        transform: rotate(90deg)
+        position: absolute
+        top: 136px
+        left: 131px
+        &:hover
+            cursor: default
+    
+.points-item
+    display: flex
+    align-items: center
+    &__img
+        margin-right: 15px
+        width: 80px
+    &__text
+        font-weight: 400
+        font-size: 16px
+        line-height: 18px
+        &:hover
+            cursor: default
+        span
+            font-weight: 600
+            font-size: 42px
+            line-height: 51px
+
+.third-section
+    position: relative
+    overflow: hidden
+    min-height: 680px
+    background-color: $light-gray-color
+    padding-top: 40px 
+    &__img
+        height: 683px
+        width: 489px
+    &__content-container
+        position: relative
+        display: flex
+        justify-content: space-between
+    &__title
+        margin-bottom: 30px
+    &__right-wrapper
+        position: absolute
+        left: 590px
+        top: 25px
+        max-width: 500px
+    &__text-mobile-horizontal
+        // в нашем коде будут адаптивы. Размер текста в третьей секции для телефонов очень большой, поэтому мы написали в index.html отдельный текст для мобильных версий и дали ему свой класс. В остальных версиях мы будем использовать стандартный вариант текста, поэтому пока что отключили text-mobile-horizontal в самом начале для ПК и планшетов, но если мы спустимся до настроек мобильных телефонов, то там ситуация противоположная. Мы будем выключать стандартный текст, и подключать второй текст для мобилок
+        display: none
+    &__text
+        // height: 360px
+        font-weight: 400
+        font-size: 18px
+        line-height: 26px
+        margin-bottom: 70px
+    &__buttons
+        width: 430px
+        justify-content: space-between
+    &__first-donut
+        position: absolute
+        right: -110px
+        top: -120px
+                
+.site-footer
+    padding-top: 30px
+    &__content-container
+        min-height: 270px
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: flex-end
+    &__main-content-wrapper
+        min-height: 200px
+        
+    &__img
+        position: absolute
+        bottom: 0px
+        left: -260px
+    &__title
+        margin-bottom: 30px
+  
+.up-btn
+    width: 65px
+    position: fixed
+    bottom: 5px
+    right: 5px
+    transition: 1s // скорость появления и исчезновения блока
+    opacity: 0 // прозрачность элемента(0 - совсем не видно)
+    &:hover
+        cursor: pointer
+        border-radius: 100px
+        background-color: #ffeae2
+
+// Все настройки стилей выше будут работать на больших мониторах от 1200px и до конца, поэтому мы не будем делать медиазапрос на этот размер, мы сделаем ещё 4 на разные ширины экрана в диапозоне, поэтому когда ширина будет меньше 1200px, то сайт будет видоизменяться, чтобы хорошо выглядеть на всех устройствах
+
+// Настройки для маленького пк-монитора или горизонтального планшета(сработают от ширины экрана от 992px до 1199px включительно). Если мы хотим чтобы последнее число в промежутке было включено в этот промежуток, то число нужно записать по следующей схеме: число.98px, иначе сайт начнет меняться не с 1200px, а с 1199px, такая же логика у всех остальных медиа-запросов
+
+@media (max-width: 1199.98px)
+    .container
+        width: 960px
+    .main-section
+        position: relative
+        overflow: hidden
+        min-height: 600px
+        padding-top: 16px
+        background-color: $light-gray-color
+        &__nav-container
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            height: 69px
+        &__logo
+            width: 134px
+        &__content-container
+            position: relative
+            display: flex
+            flex-direction: row
+        &__first-donut
+            position: absolute
+            top: 10px
+            right: 45px
+            z-index: 1
+        &__second-donut
+            position: absolute
+            right: -150px
+            top: 700px
+    .left-wrapper-first-section
+        position: relative
+        &__img
+            width: 380px
+            position: relative
+            left: 20px
+            top: 2px
+            z-index: 1
+        &__rectangle-orange
+            width: 400.7px
+            height: 120.5px
+            background: $main-orange-color
+            border-radius: 100px // закругление
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) // тень
+            position: absolute
+            top: 90px
+            left: 87px
+            transform: rotate(-55deg) //разворачивает элемент
+        &__rectangle-blue
+            width: 360.7px
+            height: 120.5px
+            background: $main-blue-color
+            position: absolute
+            border-radius: 100px
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            transform: rotate(-28deg)
+            top: 120px
+            left: 153px
+        &__rectangle-grey
+            position: absolute
+            width: 420.7px
+            height: 120.5px
+            background: #E3E3E3
+            border-radius: 100px
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            top: 200px
+            left: 125px
+            transform: rotate(-11deg)
+    .right-wrapper-first-section
+        width: 393px
+        position: absolute
+        right: -3px
+        top: 50px
+        padding-left: 10px
+        &__social-icons-box
+            margin-bottom: 1px
+            position: relative
+            z-index: 2
+        &__title
+            margin-bottom: 20px
+            position: relative
+            z-index: 2
+        &__main-text
+            max-width: 362px
+            margin-bottom: 40px
+            position: relative
+            z-index: 2
+        &__text-part
+            // margin-bottom задает расстояние между параграфами текста
+            margin-bottom: 1.5em
+            font-size: 16px
+            line-height: 1.3em
+            // line-height задает расстояние между строками в параграфе
+            &:hover
+                cursor: default
+            &:last-child
+                margin: 0px
+    .donut
+        width: 180px
+        height: 180px
+        background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+        border-radius: 150px
+        display: flex
+        align-items: center
+        justify-content: center
+        &_big
+            display: none
+            width: 282px
+            height: 282px
+        &__hole
+            width: 129.33px
+            height: 129.33px
+            background: $light-gray-color
+            border-radius: 100px
+            &_big
+                width: 188px
+                height: 188px
+            &_white
+                background: white
+    .second-section
+        min-height: 620px
+        padding-top: 40px
+        overflow: hidden
+        &__title
+            margin-bottom: 40px
+        &__cards-box
+            margin-bottom: 50px
+        &__points-box
+            display: flex
+            justify-content: space-evenly
+        &__content-container
+            position: relative
+        &__first-donut
+            position: absolute
+            top: 20px
+            right: -60px
+        &__second-donut
+            position: absolute
+            top: 280px
+            left: -100px
+        &__points-box
+            display: flex
+            justify-content: space-evenly
+
+    .cards-box
+        display: flex
+        justify-content: space-between
+        &__item
+            width: 300px
+            height: 300px
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            border-radius: 10px
+            position: relative
+            display: flex
+            align-items: flex-end
+            z-index: 1
+            background-color: $light-gray-color
+            &_orange
+                background-color: $main-orange-color
+            &_blue
+                background-color: $main-blue-color
+        &__img
+            width: 173px
+        &__text
+            width: 270px
+            height: 88px
+            text-align: center
+            font-weight: 600
+            font-size: 30px
+            line-height: 39px
+            transform: rotate(90deg)
+            position: absolute
+            top: 105px
+            left: 105px
+            &:hover
+                cursor: default
+    .points-item
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 10px
+            width: 70px
+        &__text
+            font-weight: 400
+            font-size: 14px
+            line-height: 18px
+            &:hover
+                cursor: default
+            span
+                font-weight: 600
+                font-size: 40px
+                line-height: 45px   
+    .third-section
+        position: relative
+        overflow: hidden
+        min-height: 626px
+        background-color: $light-gray-color
+        padding-top: 40px 
+        &__img
+            height: 586px
+            width: 420px
+        &__content-container
+            position: relative
+            display: flex
+            justify-content: space-between
+        &__title
+            margin-bottom: 30px
+            font-size: 70px
+        &__right-wrapper
+            position: absolute
+            left: 490px
+            top: 10px
+            max-width: 400px
+        &__text
+            // height: 360px
+            font-weight: 400
+            font-size: 16px
+            line-height: 23px
+            margin-bottom: 20px
+        &__buttons
+            width: 400px
+            justify-content: space-between
+        &__first-donut
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: -90px
+            right: -170px
+    .site-footer
+        padding-top: 30px
+        &__content-container
+            min-height: 270px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: flex-end
+        &__main-content-wrapper
+            min-height: 200px
+            
+        &__img
+            position: absolute
+            bottom: 0px
+            left: -170px
+            width: 550px
+        &__title
+            font-size: 70px
+            margin-bottom: 25px
+    .up-btn
+        width: 50px
+        position: fixed
+        bottom: 5px
+        right: 5px
+        transition: 1s // скорость появления и исчезновения блока
+        opacity: 0 // прозрачность элемента(0 - совсем не видно)
+        &:hover
+            cursor: pointer
+            border-radius: 100px
+            background-color: #ffeae2
+
+
+// Настройки для вертикального планшета(сработают от ширины экрана от 768px до 991px включительно)
+@media (max-width: 991.98px)
+    .container
+        width: 720px
+    .title
+        &:hover
+            cursor: default       
+        &__hr
+            width: 65px
+            position: absolute
+            left: 20px
+            margin: 0px
+            border: none
+            border-top: 2px solid black
+            &:hover
+                cursor: default
+            &_second
+                top: 80px
+            &_third
+                width: 50px
+                top: 55px
+                left: 15px
+            &_footer
+                top: 55px   
+                left: 10px
+    .main-section
+        position: relative
+        overflow: hidden
+        min-height: 560px
+        padding-top: 16px
+        background-color: $light-gray-color
+        &__nav-container
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            height: 69px
+        &__logo
+            width: 134px
+        &__content-container
+            position: relative
+            display: flex
+            flex-direction: row
+        &__first-donut
+            position: absolute
+            top: -15px
+            right: 35px
+            z-index: 1
+        &__second-donut
+            position: absolute
+            right: -150px
+            top: 700px
+    .left-wrapper-first-section
+        position: relative
+        &__img
+            width: 300px
+            position: relative
+            left: -7px
+            top: 2px
+            z-index: 1
+        &__rectangle-orange
+            width: 350.7px
+            height: 100.5px
+            background: $main-orange-color
+            border-radius: 100px // закругление
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) // тень
+            position: absolute
+            top: 90px
+            left: 30px
+            transform: rotate(-50deg) //разворачивает элемент
+        &__rectangle-blue
+            width: 300.7px
+            height: 100.5px
+            background: $main-blue-color
+            position: absolute
+            border-radius: 100px
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            transform: rotate(-25deg)
+            top: 120px
+            left: 100px
+        &__rectangle-grey
+            position: absolute
+            width: 320.7px
+            height: 100.5px
+            background: #E3E3E3
+            border-radius: 100px
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            top: 200px
+            left: 90px
+            transform: rotate(-11deg)
+    .right-wrapper-first-section
+        width: 393px
+        position: absolute
+        right: -90px
+        top: 5px
+        padding-left: 10px
+        &__social-icons-box
+            margin-bottom: 1px
+            position: relative
+            z-index: 2
+        &__title
+            margin-bottom: 20px
+            position: relative
+            z-index: 2
+            font-size: 60px
+        &__main-text
+            max-width: 260px
+            margin-bottom: 25px
+            position: relative
+            z-index: 2
+            
+        &__text-part
+            // margin-bottom задает расстояние между параграфами текста
+            margin-bottom: 1.5em
+            font-size: 14px
+            line-height: 1.3em
+            margin-bottom: 15px
+            // line-height задает расстояние между строками в параграфе
+            &:hover
+                cursor: default
+            &:last-child
+                margin: 0px
+    .donut
+        width: 150px
+        height: 150px
+        background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+        border-radius: 150px
+        display: flex
+        align-items: center
+        justify-content: center
+        &_big
+            display: none
+            width: 282px
+            height: 282px
+        &__hole
+            width: 100px
+            height: 100px
+            background: $light-gray-color
+            border-radius: 100px
+            &_big
+                width: 188px
+                height: 188px
+            &_white
+                background: white
+    .buttons
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 290px
+        &__book-lesson
+            width: 140px
+            height: 40px
+            font-weight: 600
+            font-size: 12px
+            line-height: 15px
+            text-align: center
+            color: white
+            background-color: $main-orange-color
+            border: none
+            border-radius: 100px
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            &:hover
+                cursor: pointer
+                border-radius: 100px
+                background-color: #FF9F7B
+        &__have-questions
+            width: 120px
+            height: 40px
+            font-size: 14px
+            display: flex
+            align-items: center
+            justify-content: space-around
+            img
+                width: 27px
+    .second-section
+        min-height: 480px
+        padding-top: 20px
+        overflow: hidden
+        &__title
+            font-size: 68px
+            margin-bottom: 40px
+        &__cards-box
+            margin-bottom: 50px
+        &__points-box
+            display: flex
+            justify-content: space-evenly
+        &__content-container
+            position: relative
+        &__first-donut
+            position: absolute
+            top: 30px
+            right: -60px
+        &__second-donut
+            position: absolute
+            top: 230px
+            left: -100px
+        &__points-box
+            display: flex
+            justify-content: space-evenly
+
+    .cards-box
+        display: flex
+        justify-content: space-between
+        margin-bottom: 30px
+        &__item
+            width: 230px
+            height: 230px
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            border-radius: 10px
+            position: relative
+            display: flex
+            align-items: flex-end
+            z-index: 1
+            background-color: $light-gray-color
+            &_orange
+                background-color: $main-orange-color
+            &_blue
+                background-color: $main-blue-color
+        &__img
+            width: 130px
+        &__text
+            width: 220px
+            height: 88px
+            text-align: center
+            font-weight: 600
+            font-size: 25px
+            line-height: 30px
+            transform: rotate(90deg)
+            position: absolute
+            top: 75px
+            left: 50px
+            &:hover
+                cursor: default
+    .points-item
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 10px
+            width: 55px
+        &__text
+            font-weight: 400
+            font-size: 12px
+            line-height: 15px
+            &:hover
+                cursor: default
+            span
+                font-weight: 600
+                font-size: 28px
+                line-height: 33px
+    .third-section
+        position: relative
+        overflow: hidden
+        min-height: 527px
+        background-color: $light-gray-color
+        padding-top:20px 
+        &__img
+            height: 531px
+            width: 381px
+            position: absolute
+            top: -25px
+            left: -23.7px
+        &__content-container
+            position: relative
+            display: flex
+            justify-content: space-between
+        &__title
+            margin-bottom: 10px
+            font-size: 52px
+        &__right-wrapper
+            position: absolute
+            left: 390px
+            top: -10px
+            max-width: 400px
+        &__text
+            // height: 360px
+            max-width: 250px
+            display: relative
+            font-weight: 400
+            font-size: 13.5px
+            line-height: 18px
+            margin-bottom: 20px
+        &__buttons
+            width: 400px
+            justify-content: space-between
+        &__first-donut
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: -90px
+            right: -210px
+            z-index: 1
+    .site-footer
+        padding-top: 10px
+        &__content-container
+            min-height: 270px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: flex-end
+        &__main-content-wrapper
+            min-height: 200px
+            
+        &__img
+            position: absolute
+            bottom: 0px
+            left: -170px
+            width: 470px
+        &__title
+            font-size: 50px
+            margin-bottom: 35px  
+    
+// Настройки для горизонтального телефона(сработают от ширины экрана от 576px до 767px включительно)
+@media (max-width: 767.98px)
+    .container
+        width: 540px
+    .nav-menu
+        // это нужно чтобы прибить меню к определенному месту, вне зависимости от того прокручиваем мы страницу или нет
+        position: fixed
+        z-index: 20
+        // Это свойство скрывает элемент с экрана
+        right: -100%
+        top: 0
+        // Меню будет занимать 100% видимой высоты экрана
+        height: 100vh
+        // Меню будет занимать 50% ширины экрана
+        width: 40%
+        background: #9ac0fb
+        transition: 0.7s all
+        &__list
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            //Элемент занимает 100% высоты своего родителя
+            height: 100%
+            right: 0px
+        &__list-item
+            color: black
+            text-decoration: none
+            font-size: 20px
+            font-weight: 600
+            margin: 0px
+            &:hover
+                color: grey
+    .nav-menu_active
+        right: 0px
+    .hamburger
+        width: 30px
+        position: fixed
+        top: 30px
+        right: 40px
+        height: 16px
+        // нужно чтобы гамбургер и крестик всегда перекрывали все остальные элементы
+        z-index: 30
+        span
+            height: 2px
+            width: 100%
+            display: block
+            background: #858585
+            margin-bottom: 5px
+            //добавляет анимацию для плавного появления крестика и гамбургера
+            transition: 1s all
+            &:last-child
+                margin: 0px
+    .hamburger_active
+        span
+            // выравнивает палки крестика
+            margin-bottom: -2px
+            &:nth-child(1)
+                // translateY(3px) выравнивает крестик 
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .title
+        &:hover
+            cursor: default       
+        &__hr
+            width: 50px
+            position: absolute
+            left: 12px
+            margin: 0px
+            border: none
+            border-top: 2px solid black
+            &:hover
+                cursor: default
+            &_second
+                top: 55px
+            &_third
+                width: 45px
+                top: 48px
+                left: 12px
+            &_footer
+                width: 45px
+                top: 38px   
+                left: 10px
+    .main-section
+        position: relative
+        overflow: hidden
+        min-height: 480px
+        padding-top: 16px
+        background-color: $light-gray-color
+        &__nav-container
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            height: 69px
+        &__logo
+            width: 90px
+        &__content-container
+            position: relative
+            display: flex
+            flex-direction: row
+        &__first-donut
+            position: absolute
+            top: -25px
+            right: 5px
+            z-index: 1
+        &__second-donut
+            position: absolute
+            right: -150px
+            top: 700px
+    .left-wrapper-first-section
+        position: relative
+        &__img
+            width: 250px
+            position: relative
+            left: -7px
+            top: 2px
+            z-index: 1
+        &__rectangle-orange
+            width: 230.7px
+            height: 70.5px
+            background: $main-orange-color
+            border-radius: 100px // закругление
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) // тень
+            position: absolute
+            top: 100px
+            left: 70px
+            transform: rotate(-50deg) //разворачивает элемент
+        &__rectangle-blue
+            width: 230.7px
+            height: 65.5px
+            background: $main-blue-color
+            position: absolute
+            border-radius: 100px
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            transform: rotate(-25deg)
+            top: 120px
+            left: 70px
+        &__rectangle-grey
+            position: absolute
+            width: 230.7px
+            height: 60.5px
+            background: #E3E3E3
+            border-radius: 100px
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            top: 150px
+            left: 70px
+            transform: rotate(-5deg)
+    .right-wrapper-first-section
+        width: 393px
+        position: absolute
+        right: -160px
+        top: 5px
+        padding-left: 10px
+        &__social-icons-box
+            margin-bottom: 1px
+            position: relative
+            z-index: 2
+        &__title
+            margin-bottom: 20px
+            position: relative
+            z-index: 2
+            font-size: 45px
+        &__main-text
+            max-width: 220px
+            margin-bottom: 15px
+            position: relative
+            z-index: 2
+        &__text-part
+            // margin-bottom задает расстояние между параграфами текста
+            margin-bottom: 1em
+            font-size: 12px
+            line-height: 1.4em
+            margin-bottom: 5px
+            // line-height задает расстояние между строками в параграфе
+            &:hover
+                cursor: default
+            &:last-child
+                margin: 0px
+    .social-icons
+        display: inline-flex
+        flex-direction: row
+        a
+            width: 40px
+            height: 40px 
+        &__item
+            width: 45px
+            height: 45px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 10px
+            &:last-child
+                margin: 0px
+            &:hover
+                border-radius: 100px
+                background-color: $main-blue-color 
+    .donut
+        width: 130px
+        height: 130px
+        background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+        border-radius: 150px
+        display: flex
+        align-items: center
+        justify-content: center
+        &_big
+            display: none
+            width: 250px
+            height: 250px
+        &__hole
+            width: 90px
+            height: 90px
+            background: $light-gray-color
+            border-radius: 100px
+            &_big
+                width: 180px
+                height: 180px
+            &_white
+                background: white
+    .buttons
+        display: flex
+        align-items: space-between
+        justify-content: space-between
+        max-width: 220px
+        &__book-lesson
+            width: 110px
+            height: 40px
+            font-weight: 600
+            font-size: 11px
+            line-height: 13px
+            text-align: center
+            color: white
+            background-color: $main-orange-color
+            border: none
+            border-radius: 100px
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            &:hover
+                cursor: pointer
+                border-radius: 100px
+                background-color: #FF9F7B
+        &__have-questions
+            width: 100px
+            height: 40px
+            font-size: 12px
+            display: flex
+            align-items: center
+            justify-content: space-around
+            img
+                width: 27px
+    .second-section
+        min-height: 400px
+        padding-top: 20px
+        overflow: hidden
+        &__title
+            font-size: 45px
+            margin-bottom: 40px
+        &__cards-box
+            margin-bottom: 50px
+        &__points-box
+            display: flex
+            justify-content: space-evenly
+        &__content-container
+            position: relative
+        &__first-donut
+            position: absolute
+            top: 40px
+            right: -40px
+        &__second-donut
+            position: absolute
+            top: 165px
+            left: -70px
+        &__points-box
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+
+    .cards-box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 50px
+        &__item
+            width: 170px
+            height: 170px
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            border-radius: 10px
+            position: relative
+            display: flex
+            align-items: flex-end
+            z-index: 1
+            background-color: $light-gray-color
+            &_orange
+                background-color: $main-orange-color
+            &_blue
+                background-color: $main-blue-color
+        &__img
+            width: 95px
+        &__text
+            width: 220px
+            height: 88px
+            text-align: center
+            font-weight: 600
+            font-size: 18px
+            line-height: 20px
+            transform: rotate(90deg)
+            position: absolute
+            top: 43px
+            left: 5px
+            &:hover
+                cursor: default
+    .points-item
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 5px
+            width: 40px
+        &__text
+            font-weight: 400
+            font-size: 10px
+            line-height: 10px
+            &:hover
+                cursor: default
+            span
+                font-weight: 600
+                font-size: 24px
+                line-height: 25px
+    .third-section
+        position: relative
+        overflow: hidden
+        min-height: 436px
+        background-color: $light-gray-color
+        padding-top: 25px 
+        &__img
+            height: 387px
+            width: 280px
+            position: absolute
+            top: 23px
+            left: -23.7px
+        &__content-container
+            position: relative
+            display: flex
+            justify-content: space-between
+        &__title
+            margin-bottom: 20px
+            font-size: 45px
+        &__right-wrapper
+            position: absolute
+            left: 285px
+            top: -10px
+            max-width: 400px
+        &__text
+            // height: 360px
+            max-width: 220px
+            display: none
+            font-weight: 400
+            font-size: 12px
+            line-height: 17px
+            margin-bottom: 10px
+        &__text-mobile-horizontal
+            display: block
+            max-width: 220px
+            font-weight: 400
+            font-size: 12px
+            line-height: 19px
+            margin-bottom: 25px
+        &__buttons
+            width: 400px
+            justify-content: space-between
+        &__first-donut
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: -90px
+            right: -185px
+            z-index: 1
+    .site-footer
+        padding-top: 10px
+        &__content-container
+            min-height: 200px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: flex-end
+        &__main-content-wrapper
+            min-height: 200px
+        &__img
+            position: absolute
+            bottom: 0px
+            left: -170px
+            width: 400px
+        &__title
+            font-size:35px
+            margin-bottom: 35px  
+    .up-btn
+        width: 35px
+        height: 35px
+        position: fixed
+        bottom: 5px
+        right: 5px
+        transition: 1s // скорость появления и исчезновения блока
+        opacity: 0 // прозрачность элемента(0 - совсем не видно)
+        &:hover
+            cursor: pointer
+            border-radius: 100px
+            background-color: #ffeae2
+    
+
+
+// Настройки для вертикального телефона(сработают от ширины экрана от 320px(самые маленькие экраны телефонов) до 575px 
+@media (max-width: 575.98px)
+    .container
+        width: 100%
+    .nav-menu
+        // это нужно чтобы прибить меню к определенному месту, вне зависимости от того прокручиваем мы страницу или нет
+        position: fixed
+        z-index: 20
+        // Это свойство скрывает элемент с экрана
+        right: -100%
+        top: 0
+        // Меню будет занимать 100% видимой высоты экрана
+        height: 100vh
+        // Меню будет занимать 50% ширины экрана
+        width: 40%
+        background: #9ac0fb
+        transition: 0.7s all
+        &__list
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            //Элемент занимает 100% высоты своего родителя
+            height: 100%
+            right: 0px
+        &__list-item
+            color: black
+            text-decoration: none
+            font-size: 16px
+            font-weight: 600
+            margin: 0px
+            &:hover
+                color: grey
+    .nav-menu_active
+        right: 0px
+    .hamburger
+        width: 30px
+        position: fixed
+        top: 35px
+        right: 15px
+        height: 16px
+        // нужно чтобы гамбургер и крестик всегда перекрывали все остальные элементы
+        z-index: 30
+        span
+            height: 2px
+            width: 100%
+            display: block
+            background: #858585
+            margin-bottom: 5px
+            //добавляет анимацию для плавного появления крестика и гамбургера
+            transition: 1s all
+            &:last-child
+                margin: 0px
+    .hamburger_active
+        span
+            // выравнивает палки крестика
+            margin-bottom: -2px
+            &:nth-child(1)
+                // translateY(3px) выравнивает крестик 
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .donut
+        width: 130px
+        height: 130px
+        background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+        border-radius: 150px
+        display: flex
+        align-items: center
+        justify-content: center
+        &_big
+            display: none
+            width: 250px
+            height: 250px
+        &__hole
+            width: 90px
+            height: 90px
+            background: $light-gray-color
+            border-radius: 100px
+            &_big
+                width: 180px
+                height: 180px
+            &_white
+                background: white
+    .main-section
+        position: relative
+        overflow: hidden
+        min-height: 410px
+        padding-top: 16px
+        background-color: $light-gray-color
+        &__nav-container
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            height: 69px
+        &__logo
+            width: 90px
+        &__content-container
+            position: relative
+            display: flex
+            flex-direction: row
+        &__first-donut
+            display: none
+            position: absolute
+            top: -25px
+            right: 5px
+            z-index: 1
+        &__second-donut
+            position: absolute
+            right: -150px
+            top: 700px
+    .buttons
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 250px
+        max-width: 250px
+        &__book-lesson
+            width: 110px
+            height: 40px
+            font-weight: 600
+            font-size: 11px
+            line-height: 13px
+            text-align: center
+            color: white
+            background-color: $main-orange-color
+            border: none
+            border-radius: 100px
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            &:hover
+                cursor: pointer
+                border-radius: 100px
+                background-color: #FF9F7B
+        &__have-questions
+            width: 100px
+            height: 40px
+            font-size: 12px
+            display: flex
+            align-items: center
+            justify-content: space-around
+            img
+                width: 27px
+    .title
+        &:hover
+            cursor: default       
+        &__hr
+            width: 40px
+            position: absolute
+            left: 8px
+            top: 35px
+            margin: 0px
+            border: none
+            border-top: 2px solid black
+            &:hover
+                cursor: default
+            &_second
+                top: 40px
+            &_third
+                width: 40px
+                top: 35px
+                left: 6px
+            &_footer
+                width: 45px
+                top: 30px   
+                left: 4px
+    .left-wrapper-first-section
+        position: relative
+        &__img
+            width: 150px
+            position: relative
+            left: -7px
+            top: 2px
+            z-index: 1
+        &__rectangle-orange
+          display: none
+        &__rectangle-blue
+            display: none
+        &__rectangle-grey
+            display: none
+    .right-wrapper-first-section
+        width: 393px
+        position: absolute
+        right: -230px
+        top: 5px
+        padding-left: 10px
+        &__social-icons-box
+            margin-bottom: 10px
+            position: relative
+            z-index: 2
+        &__title
+            margin-bottom: 20px
+            position: relative
+            z-index: 2
+            font-size: 32px
+        &__main-text
+            display: none
+        &__main-text_vertical
+            max-width: 150px
+            margin-bottom: 15px
+            position: relative
+            z-index: 2
+            display: block
+        &__text-part-vertical
+            // margin-bottom задает расстояние между параграфами текста
+            margin-bottom: 0.5em
+            font-size: 12px
+            line-height: 1.3em
+            margin-bottom: 5px
+            // line-height задает расстояние между строками в параграфе
+            &:hover
+                cursor: default
+            &:last-child
+                margin: 0px
+        &__buttons
+            position: absolute
+            top: 105%
+            left: -31%
+    .social-icons
+        display: inline-flex
+        flex-direction: row
+        a
+            height: 30px 
+            img
+                width: 30px
+                height: 30px
+        &__item
+            width: 30px
+            height: 30px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 5px
+            &:last-child
+                margin: 0px
+            &:hover
+                border-radius: 100px
+                border-color: $main-blue-color
+    .second-section
+        min-height: 400px
+        padding-top: 40px
+        overflow: hidden
+        &__title
+            font-size: 32px
+            margin-bottom: 40px
+        &__cards-box
+            margin-bottom: 50px
+        &__points-box
+            display: flex
+            flex-wrap: wrap
+        &__content-container
+            position: relative
+        &__first-donut
+            position: absolute
+            top: 28px
+            right: -28px
+        &__second-donut
+            position: absolute
+            top: 625px
+            left: -29px
+        &__points-box
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+            max-width: 320px
+            margin: 0 auto
+        &__points-item
+            margin-bottom: 25px
+            &:nth-child(3)
+                margin: 0px
+                padding-bottom: 20px
+            &:nth-child(4)
+                margin: 0px
+                padding-bottom: 20px
+            
+    .cards-box
+        display: flex
+        flex-direction: column
+        align-items: center
+        &__item
+            width: 210px
+            height: 210px
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            border-radius: 10px
+            position: relative
+            display: flex
+            align-items: flex-end
+            z-index: 1
+            background-color: $light-gray-color
+            margin-bottom: 10px
+            &:last-child
+                margin: 0px
+            &_orange
+                background-color: $main-orange-color
+            &_blue
+                background-color: $main-blue-color
+        &__img
+            width: 115px
+        &__text
+            width: 220px
+            height: 88px
+            text-align: center
+            font-weight: 600
+            font-size: 20px
+            line-height: 20px
+            transform: rotate(90deg)
+            position: absolute
+            top: 64px
+            left: 25px
+            &:hover
+                cursor: default
+    .points-item
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 10px
+            width: 40px
+        &__text
+            font-weight: 400
+            font-size: 10px
+            line-height: 10px
+            &:hover
+                cursor: default
+            span
+                font-weight: 600
+                font-size: 24px
+                line-height: 25px 
+    .third-section
+        position: relative
+        overflow: hidden
+        min-height: 699px
+        background-color: $light-gray-color
+        padding-top: 25px 
+        &__img
+            height: 289px
+            width: 213px
+            position: absolute
+            top: 384px
+            left: 57px
+        &__content-container
+            position: relative
+            display: flex
+            justify-content: space-between
+        &__title
+            margin-bottom: 20px
+            font-size: 32px
+        &__right-wrapper
+            position: absolute
+            left: 50px
+            top: -10px
+            max-width: 400px
+        &__text-mobile-horizontal
+            display: block
+            max-width: 220px
+            font-weight: 400
+            font-size: 13px
+            line-height: 19px
+            margin-bottom: 25px
+        &__buttons
+            width: 400px
+            justify-content: space-between
+        &__first-donut
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: -90px
+            right: -185px
+            z-index: 1 
+    .site-footer
+        padding-top: 10px
+        &__content-container
+            min-height: 200px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: flex-end
+        &__main-content-wrapper
+            min-height: 200px
+        &__img
+            position: absolute
+            bottom: 0px
+            left: -110px
+            width: 230px
+        &__title
+            font-size:28px
+            margin-bottom: 20px
+    
+   
+    
